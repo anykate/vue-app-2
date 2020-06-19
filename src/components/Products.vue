@@ -1,16 +1,12 @@
 <template>
-  <div class="hello">
-    <ul>
-      <li v-for="product in allProducts" :key="product.id">
-        <div>{{ product.id }}</div>
-        <div>{{ product.title }}</div>
-        <div>{{ product.price | currency }}</div>
-        <button @click="deleteThisProduct(product.id)">
-          Delete
-        </button>
-      </li>
-    </ul>
-  </div>
+  <ul class="products-listing">
+    <li v-for="product in allProducts" :key="product.id">
+      <div>{{ product.id }}</div>
+      <div>{{ product.title }}</div>
+      <div>{{ product.price | currency }}</div>
+      <button @click="deleteThisProduct(product.id)">❌</button>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -46,18 +42,22 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.products-listing li {
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.products-listing li button {
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
 }
 </style>
