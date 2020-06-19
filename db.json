@@ -3,22 +3,27 @@
     {
       "id": 1,
       "title": "Product One",
-      "price": 200
+      "price": "200"
     },
     {
       "id": 2,
       "title": "Product Two",
-      "price": 300
+      "price": "300"
     },
     {
       "id": 3,
       "title": "Product Three",
-      "price": 400
+      "price": "400"
     },
     {
       "id": 4,
       "title": "Product Four",
-      "price": 400
+      "price": "400"
+    },
+    {
+      "title": "Product Five",
+      "price": "500",
+      "id": 5
     }
   ]
 }

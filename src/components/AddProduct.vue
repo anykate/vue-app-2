@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "AddProduct",
   data() {
@@ -19,8 +20,13 @@ export default {
     };
   },
   methods: {
+    ...mapActions(["addAPIProduct"]),
     onSubmit() {
-      console.log(this.newTitle + " " + this.newPrice);
+      //console.log(this.newTitle + " " + this.newPrice);
+      this.addAPIProduct({
+        title: this.newTitle,
+        price: this.newPrice,
+      });
     },
   },
 };
