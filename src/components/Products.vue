@@ -5,6 +5,9 @@
         <div>{{ product.id }}</div>
         <div>{{ product.title }}</div>
         <div>{{ product.price | currency }}</div>
+        <button @click="deleteThisProduct(product.id)">
+          Delete
+        </button>
       </li>
     </ul>
   </div>
@@ -24,9 +27,18 @@ export default {
     ...mapGetters({ allProducts: "allStoreProducts" }),
   },
   methods: {
-    ...mapActions({ getProducts: "getAPIProducts" }),
+    ...mapActions({
+      getProducts: "getAPIProducts",
+      deleteProduct: "deleteAPIProduct",
+    }),
+    deleteThisProduct(id) {
+      this.deleteProduct(id);
+    },
   },
   created() {
+    this.getProducts();
+  },
+  updated() {
     this.getProducts();
   },
 };

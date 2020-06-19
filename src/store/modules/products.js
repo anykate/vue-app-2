@@ -21,11 +21,17 @@ const actions = {
     );
     commit("setAPIProduct", response.data);
   },
+  async deleteAPIProduct({ commit }, id) {
+    await axios.delete(`http://localhost:3000/products/${id}/`);
+    commit("removeAPIProduct", id);
+  },
 };
 
 const mutations = {
   setAPIProducts: (state, products) => (state.products = products),
   setAPIProduct: (state, product) => state.products.unshift(product),
+  removeAPIProduct: (state, id) =>
+    state.products.filter((product) => product.id !== id),
 };
 
 export default {

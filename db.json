@@ -1,29 +1,14 @@
 {
   "products": [
     {
-      "id": 1,
-      "title": "Product One",
-      "price": "200"
+      "title": "Product 1",
+      "price": "12",
+      "id": 1
     },
     {
-      "id": 2,
-      "title": "Product Two",
-      "price": "300"
-    },
-    {
-      "id": 3,
-      "title": "Product Three",
-      "price": "400"
-    },
-    {
-      "id": 4,
-      "title": "Product Four",
-      "price": "400"
-    },
-    {
-      "title": "Product Five",
-      "price": "500",
-      "id": 5
+      "title": "Product 3",
+      "price": "45",
+      "id": 3
     }
   ]
 }
